@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return "Test page";
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
